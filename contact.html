@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Queen Anne School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;500;700&display=swap');
+        
+        :root {
+            --dark-green: #113b23;
+            --light-green: #78ac61;
+            --gold: #f3c317;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+        }
+        
+        .bg-dark-green { background-color: var(--dark-green); }
+        .bg-light-green { background-color: var(--light-green); }
+        .bg-gold { background-color: var(--gold); }
+        .text-dark-green { color: var(--dark-green); }
+        .text-light-green { color: var(--light-green); }
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--light-green));
+            z-index: 9999;
+            transition: width 0.25s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <!-- Header -->
+    <header class="bg-dark-green text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.jpg" alt="Queen Anne School Logo" class="h-16 w-16 rounded-full">
+                <div class="ml-3">
+                    <h1 class="text-xl font-bold">Queen Anne School</h1>
+                    <p class="text-xs text-gold">Sta. Rosa & Dasmariñas</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="index.html#about" class="hover:text-gold transition">About</a>
+                <a href="index.html#academics" class="hover:text-gold transition">Academics</a>
+                <a href="admissions.html" class="hover:text-gold transition">Admissions</a>
+                <a href="campus-life.html" class="hover:text-gold transition">Campus Life</a>
+                <a href="contact.html" class="text-gold">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-dark-green to-light-green text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Contact Us</h1>
+            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">We're Here to Help</p>
+            <nav class="text-gold" data-aos="fade-up" data-aos-delay="400">
+                <a href="index.html" class="hover:underline">Home</a> > <span>Contact</span>
+            </nav>
+        </div>
+        
+    </section>
+
+    <!-- Quick Contact Info -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="flex items-center justify-center" data-aos="fade-up">
+                    <i class="fas fa-phone text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Call Us</p>
+                        <p class="text-gray-600">(049) 502-0370</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-envelope text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Email Us</p>
+                        <p class="text-gray-600">QAS@QueenAnneSchool.org</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-clock text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Office Hours</p>
+                        <p class="text-gray-600">Mon-Fri: 8AM-5PM</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-map-marker-alt text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Visit Us</p>
+                        <p class="text-gray-600">Sta. Rosa, Laguna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information & Form -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-dark-green mb-8">Get in Touch</h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        We're always here to answer your questions and provide information about Queen Anne School. Whether you're interested in enrollment, have questions about our programs, or want to schedule a campus visit, we'd love to hear from you.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="contact-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                            <div class="flex items-start">
+                                <div class="bg-gold text-dark-green p-3 rounded-full mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                <label class="block text-dark-green font-semibold mb-2">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Inquiry Type *</label>
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition">
+                                <option value="">Select Inquiry Type</option>
+                                <option>General Information</option>
+                                <option>Admissions & Enrollment</option>
+                                <option>Academic Programs</option>
+                                <option>Scholarship Information</option>
+                                <option>Campus Life & Activities</option>
+                                <option>TESDA Training Programs</option>
+                                <option>Schedule a Campus Visit</option>
+                                <option>Sports Programs</option>
+                                <option>Arts & Music Programs</option>
+                                <option>Technical Support</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Subject *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition" placeholder="Brief subject of your inquiry">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-dark-green font-semibold mb-2">Message *</label>
+                            <textarea required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none transition" placeholder="Please provide details about your inquiry. The more information you provide, the better we can assist you."></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" required class="mt-1 mr-3">
+                                <label class="text-sm text-gray-600">I agree to the processing of my personal data in accordance with the Data Privacy Act and Queen Anne School's privacy policy. I understand that my information will be used solely for responding to this inquiry.</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-dark-green text-white font-bold py-4 px-6 rounded-lg hover:bg-light-green transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                        
+                        <div class="mt-4 text-center">
+                            <p class="text-sm text-gray-600">We typically respond within 24 hours during business days.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Campus Map -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Find Us</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-right">
+                    <div class="bg-dark-green text-white p-4">
+                        <h3 class="text-xl font-bold">Main Campus - Sta. Rosa</h3>
+                    </div>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.4418241362155!2d121.12024457510013!3d14.285742586164101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d858d3f85c21%3A0xc7ee4f021b95f744!2sQueen%20Anne%20School%20of%20Sta.%20Rosa!5e0!3m2!1sen!2sph!4v1748254727269!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="p-4">
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><i class="fas fa-map-marker-alt text-light-green mr-2"></i> New Santa Rosa Homes, Sta. Rosa, Laguna</p>
+                            <p class="text-gray-700"><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370</p>
+                            <p class="text-gray-700"><i class="fas fa-envelope text-light-green mr-2"></i> QAS@QueenAnneSchool.org</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Directions by Car</h4>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>From Manila:</strong> Take SLEX, exit at Santa Rosa. Follow signs to New Santa Rosa Homes subdivision.</p>
+                            <p><strong>From Laguna:</strong> Take the national highway toward Sta. Rosa, turn into New Santa Rosa Homes.</p>
+                            <p><strong>Landmarks:</strong> Near Enchanted Kingdom and Santa Rosa City Hall</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Public Transportation</h4>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>From Manila:</strong> Take bus to Sta. Rosa via EDSA or Buendia, then jeepney to New Santa Rosa Homes</p>
+                            <p><strong>From Laguna:</strong> Take jeepney or UV Express to Sta. Rosa proper, then tricycle to the school</p>
+                            <p><strong>Note:</strong> School service available for enrolled students</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Parking Information</h4>
+                        <div class="space-y-2 text-gray-700">
+                            <p>• Free parking available on campus</p>
+                            <p>• Separate areas for visitors and staff</p>
+                            <p>• Security personnel on duty during school hours</p>
+                            <p>• Additional parking during special events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Contacts -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Department Contacts</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="contact-card bg-white rounded-lg shadow-lg p-6 transition duration-300" data-aos="fade-up">
+                    <div class="text-center mb-4">
+                        <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-green">Admissions Office</h3>
+                    </div>
+                    <div class="space-y-2 text-gray-700">
+                        <p><i class="fas fa-envelope text-light-green mr-2"></i> admissions@QueenAnneSchool.org</p>
+                        <p><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370 ext. 101</p>
+                        <p><i class="fas fa-clock text-light-green mr-2"></i> Mon-Sat: 8AM-5PM</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">For enrollment inquiries, application assistance, and campus tours.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-white rounded-lg shadow-lg p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-4">
+                        <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-green">Academic Affairs</h3>
+                    </div>
+                    <div class="space-y-2 text-gray-700">
+                        <p><i class="fas fa-envelope text-light-green mr-2"></i> academics@QueenAnneSchool.org</p>
+                        <p><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370 ext. 102</p>
+                        <p><i class="fas fa-clock text-light-green mr-2"></i> Mon-Fri: 8AM-5PM</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">For academic programs, curriculum inquiries, and student academic concerns.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-white rounded-lg shadow-lg p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-4">
+                        <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-green">Student Affairs</h3>
+                    </div>
+                    <div class="space-y-2 text-gray-700">
+                        <p><i class="fas fa-envelope text-light-green mr-2"></i> studentaffairs@QueenAnneSchool.org</p>
+                        <p><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370 ext. 103</p>
+                        <p><i class="fas fa-clock text-light-green mr-2"></i> Mon-Fri: 8AM-5PM</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">For student activities, clubs, organizations, and disciplinary matters.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-white rounded-lg shadow-lg p-6 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-4">
+                        <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-green">Finance Office</h3>
+                    </div>
+                    <div class="space-y-2 text-gray-700">
+                        <p><i class="fas fa-envelope text-light-green mr-2"></i> finance@QueenAnneSchool.org</p>
+                        <p><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370 ext. 104</p>
+                        <p><i class="fas fa-clock text-light-green mr-2"></i> Mon-Fri: 8AM-4PM</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">For tuition payments, scholarships, and financial assistance inquiries.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-white rounded-lg shadow-lg p-6 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-center mb-4">
+                        <div class="bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-green">TESDA Center</h3>
+                    </div>
+                    <div class="space-y-2 text-gray-700">
+                        <p><i class="fas fa-envelope text-light-green mr-2"></i> tesda@QueenAnneSchool.org</p>
+                        <p><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370 ext. 105</p>
+                        <p><i class="fas fa-clock text-light-green mr-2"></i> Mon-Fri: 8AM-5PM</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">For technical training programs, certifications, and skills development courses.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-white rounded-lg shadow-lg p-6 transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-center mb-4">
+                        <div class="bg-pink-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-green">Guidance Office</h3>
+                    </div>
+                    <div class="space-y-2 text-gray-700">
+                        <p><i class="fas fa-envelope text-light-green mr-2"></i> guidance@QueenAnneSchool.org</p>
+                        <p><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370 ext. 106</p>
+                        <p><i class="fas fa-clock text-light-green mr-2"></i> Mon-Fri: 8AM-5PM</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-600">For counseling services, career guidance, and personal development support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-gray-50 rounded-lg shadow-md" data-aos="fade-up">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-dark-green">What are your admission requirements?</h3>
+                                <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-gray-700">Our admission requirements vary by grade level. Generally, we require birth certificates, previous report cards, medical certificates, and good moral character certificates. For transferees, we also need Form 137 and certificate of transfer credential. Please contact our admissions office for specific requirements for your child's grade level.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-dark-green">When is the enrollment period?</h3>
+                                <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-gray-700">Our enrollment typically starts in February and continues through May for the following school year. However, we accept applications year-round, especially for Pre-School. Early enrollment is encouraged as slots are limited. Please check our website or call our admissions office for specific dates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-dark-green">Do you offer scholarships?</h3>
+                                <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-gray-700">Yes! We offer various scholarship programs including Academic Excellence (up to 100% tuition discount), Athletic Scholarships (50-75% discount), Loyalty Scholarships (20% discount), City Scholar Program (full coverage), DepEd ESC subsidies, and Sibling Discounts. Each scholarship has specific requirements and application processes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-dark-green">What extracurricular activities are available?</h3>
+                                <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-gray-700">We offer over 25 clubs and organizations including sports teams (basketball, volleyball, badminton, karate, chess), performing arts (chorale, dance troupe, drama club), academic clubs (science, math olympiad, debate society), and community service groups. Our teams have won numerous championships at regional and national levels.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-question w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-dark-green">Can I schedule a campus tour?</h3>
+                                <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-gray-700">Absolutely! We encourage prospective families to visit our campus. You can schedule a tour by calling our admissions office at (049) 502-0370, emailing us, or using our contact form. Tours are available Monday through Saturday during school hours, and we can also arrange special appointments outside regular hours if needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="py-16 bg-red-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-red-700 mb-12" data-aos="fade-up">Emergency Contacts</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg" data-aos="fade-up">
+                    <div class="flex items-start">
+                        <i class="fas fa-exclamation-triangle text-red-500 text-2xl mr-4 mt-1"></i>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-red-700 mb-4">In Case of Emergency</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <p class="font-semibold text-red-700 mb-2">School Emergency Hotline:</p>
+                                    <p class="text-red-600 text-lg font-bold">(049) 502-0370</p>
+                                    <p class="text-sm text-red-600">Available 24/7 during school days</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-red-700 mb-2">Security Office:</p>
+                                    <p class="text-red-600 text-lg font-bold">(049) 502-0370 ext. 911</p>
+                                    <p class="text-sm text-red-600">Campus security and safety</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-4 bg-white rounded-lg">
+                                <p class="text-sm text-gray-700">
+                                    <strong>For life-threatening emergencies, always call 911 first, then notify the school.</strong> 
+                                    Our emergency protocols include immediate medical response, parent notification, and coordination with local emergency services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Queen Anne School Logo" class="h-12 w-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">Queen Anne School</h3>
+                            <p class="text-gold text-sm">Est. 1994</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Shaping compassionate, competent leaders rooted in faith through holistic education since 1994.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-gold transition">About Us</a></li>
+                        <li><a href="index.html#academics" class="text-gray-300 hover:text-gold transition">Academics</a></li>
+                        <li><a href="admissions.html" class="text-gray-300 hover:text-gold transition">Admissions</a></li>
+                        <li><a href="campus-life.html" class="text-gray-300 hover:text-gold transition">Campus Life</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mr-2 mt-1"></i>
+                            <span class="text-gray-300 text-sm">New Santa Rosa Homes, Sta. Rosa, Laguna</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gold mr-2"></i>
+                            <span class="text-gray-300">(049) 502-0370</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <span class="text-gray-300">QAS@QueenAnneSchool.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300 text-sm">© 2025 Queen Anne School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-gold text-dark-green p-3 rounded-full shadow-lg hover:bg-yellow-500 transition opacity-0 pointer-events-none z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Scroll Progress Bar
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+        }
+
+        window.addEventListener('scroll', updateScrollProgress);
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Contact Form
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>    

@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen Anne School of Sta. Rosa & Dasmariñas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;500;700&display=swap');
+        
+        :root {
+            --dark-green: #113b23;
+            --light-green: #78ac61;
+            --gold: #f3c317;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bg-dark-green {
+            background-color: var(--dark-green);
+        }
+        
+        .bg-light-green {
+            background-color: var(--light-green);
+        }
+        
+        .bg-gold {
+            background-color: var(--gold);
+        }
+        
+        .text-dark-green {
+            color: var(--dark-green);
+        }
+        
+        .text-light-green {
+            color: var(--light-green);
+        }
+        
+        .text-gold {
+            color: var(--gold);
+        }
+        
+        .border-gold {
+            border-color: var(--gold);
+        }
+        
+        .hero-slide {
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            border: 3px solid var(--dark-green);
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--gold);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--light-green);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--dark-green);
+        }
+
+
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-dark-green text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+<img src="logo.jpg" alt="MIS Logo" class="h-16 w-16 rounded-full mr-4">                <div>
+                    <h1 class="text-xl font-bold">Queen Anne School</h1>
+                    <p class="text-xs text-gold">Sta. Rosa & Dasmariñas</p>
+                </div>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+<nav class="hidden md:flex space-x-8">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="admissions.html">Admissions</a>  <!-- Links to separate page -->
+    <a href="campus-life.html">Campus Life</a> <!-- Links to separate page -->
+    <a href="#achievements">Achievements</a>
+    <a href="#news">News</a>
+    <a href="#gallery">Gallery</a>
+    <a href="contact.html">Contact</a>         <!-- Links to separate page -->
+</nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-green pb-4 px-4">
+            <a href="#home" class="block py-2 hover:text-gold transition">Home</a>
+            <a href="#about" class="block py-2 hover:text-gold transition">About</a>
+            <a href="#academics" class="block py-2 hover:text-gold transition">Academics</a>
+            <a href="#admissions" class="block py-2 hover:text-gold transition">Admissions</a>
+            <a href="#campus-life" class="block py-2 hover:text-gold transition">Campus Life</a>
+            <a href="#achievements" class="block py-2 hover:text-gold transition">Achievements</a>
+            <a href="#news" class="block py-2 hover:text-gold transition">News</a>
+            <a href="#gallery" class="block py-2 hover:text-gold transition">Gallery</a>
+            <a href="#contact" class="block py-2 hover:text-gold transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden">
+        <!-- Hero Slideshow -->
+        <div class="relative h-screen">
+            <div class="hero-slide absolute inset-0 bg-cover bg-center flex items-center opacity-100" style="background-image: url('https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/487478526_1078204981000784_5009574089113074223_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_aid=0&_nc_eui2=AeFVK5_v7JLlhTGhbwzTRbGByGv8k6L5V1PIa_yTovlXU-6g2AX85PCSGQKpV1QRAl8L_3lXSVaPnF_M5O6P_NZv&_nc_ohc=UiWSM8SginAQ7kNvwHEFH8d&_nc_oc=Adns4MhhgJNNGssreFlTBo4XrmlK6EGGLbjf7E4UD_lqfjW9aVRd2BrAJl54aJ2dNK9IALJddBCtfQjSEy7PeIIZ&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=EPRpX6ZzY9X6UfMpsBXgdw&oh=00_AfJAJmNxpdtVrwfSatZzWSCYeJCsVqsPSqXhjwZjgPrXtQ&oe=683A2975');">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="container mx-auto px-4 relative z-10 text-white text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Queen Anne School</h1>
+                    <p class="text-xl md:text-2xl mb-8">Premier Holistic Education Since 1994</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#admissions" class="bg-gold text-dark-green font-bold px-6 py-3 rounded-lg hover:bg-yellow-500 transition">Enroll Now</a>
+                        <button onclick="openGallery()" class="bg-transparent border-2 border-gold text-white font-bold px-6 py-3 rounded-lg hover:bg-gold hover:text-dark-green transition">Virtual Tour</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide absolute inset-0 bg-cover bg-center flex items-center opacity-0" style="background-image: url('https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/487778651_1078204904334125_4219858582796712643_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEyDO0We1K2Xk1-dBDQ3d2J6AU0vXIkHI7oBTS9ciQcjlrcC6EfCum9_KGIbf1YndHfETmw61LDSS9EErAKUGRl&_nc_ohc=LphWSQDUuhUQ7kNvwFXkDxL&_nc_oc=Adm8edRUs4wvMH1X2zhfSPZXBJ2U5QOuNmugeB5gzRG_fwo6SBUyNohyBIdVjR7RqbtE0P2lhDPdWLmxemzmwTj_&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=UQNvoftrzWosK_8Kp2AUAg&oh=00_AfJ98rBkmP_XOCON3Ug9WppQOz9xIvl2vUYhCLVq2wfU1A&oe=683A42B6');">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="container mx-auto px-4 relative z-10 text-white text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Shaping Future Leaders</h1>
+                    <p class="text-xl md:text-2xl mb-8">Faith, Integrity, Respect, Service, Teamwork</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#academics" class="bg-gold text-dark-green font-bold px-6 py-3 rounded-lg hover:bg-yellow-500 transition">Our Programs</a>
+                        <a href="#campus-life" class="bg-transparent border-2 border-gold text-white font-bold px-6 py-3 rounded-lg hover:bg-gold hover:text-dark-green transition">Student Life</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide absolute inset-0 bg-cover bg-center flex items-center opacity-0" style="background-image: url('https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/487779129_1077798014374814_8301955002418456974_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeG8TnElPa1uenS1l4tvYWUFUS1o4QhwZBtRLWjhCHBkGw25eYXCDDm5zXSmggo0aNyxRjZQx3tK6Ki8JlcLaZ5Y&_nc_ohc=wSwSNBwYFEYQ7kNvwHTC2I2&_nc_oc=AdlaIZQzDbIgnoUD08jAoR02sF3yhofKF1n-ubK71EjnfdRrRBH5fnYgL7VC9DtYHv9dw0HoK-b52WfJ_yfgKYqf&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=DFBd5yee5sjt3bWvktIeGg&oh=00_AfLgc6TXekwGY8yKyefHb2NU77kcJBWy2CrK0GMEfEG4Vg&oe=683A4509');">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="container mx-auto px-4 relative z-10 text-white text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Excellence in Academics & Sports</h1>
+                    <p class="text-xl md:text-2xl mb-8">National Champions in Sports, Dance, Music, and Martial Arts</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#achievements" class="bg-gold text-dark-green font-bold px-6 py-3 rounded-lg hover:bg-yellow-500 transition">Our Achievements</a>
+                        <a href="#admissions" class="bg-transparent border-2 border-gold text-white font-bold px-6 py-3 rounded-lg hover:bg-gold hover:text-dark-green transition">Scholarships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide Indicators -->
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-2 z-10">
+            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none slide-indicator" data-slide="0"></button>
+            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none slide-indicator" data-slide="1"></button>
+            <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none slide-indicator" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-t-4 border-gold flex items-start">
+                    <div class="text-gold text-3xl mr-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark-green mb-2">Accredited by DepEd</h3>
+                        <p class="text-gray-600">Recognized by Department of Education, City Scholar Partner</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-t-4 border-gold flex items-start">
+                    <div class="text-gold text-3xl mr-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark-green mb-2">Complete Curriculum</h3>
+                        <p class="text-gray-600">Pre-School to Senior High (STEM, ABM, HUMSS, GAS)</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-t-4 border-gold flex items-start">
+                    <div class="text-gold text-3xl mr-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark-green mb-2">Champions</h3>
+                        <p class="text-gray-600">National Champions in Sports, Dance, Music, Martial Arts</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-t-4 border-gold flex items-start">
+                    <div class="text-gold text-3xl mr-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark-green mb-2">TESDA Center</h3>
+                        <p class="text-gray-600">Technical Education and Skills Development Authority Training Center Opening Soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Explore Queen Anne School</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#academics" class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="bg-dark-green text-white p-4 text-center">
+                        <i class="fas fa-book-open text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Academics</h3>
+                    </div>
+                    <div class="p-4 text-gray-700">
+                        <p>Discover our comprehensive educational programs from Pre-School to Senior High School.</p>
+                    </div>
+                </a>
+                
+                <a href="#campus-life" class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="bg-dark-green text-white p-4 text-center">
+                        <i class="fas fa-users text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Campus Life</h3>
+                    </div>
+                    <div class="p-4 text-gray-700">
+                        <p>Experience our vibrant student community, clubs, and extracurricular activities.</p>
+                    </div>
+                </a>
+                
+                <a href="#achievements" class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="bg-dark-green text-white p-4 text-center">
+                        <i class="fas fa-medal text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Achievements</h3>
+                    </div>
+                    <div class="p-4 text-gray-700">
+                        <p>Celebrate our students' accomplishments in academics, sports, and the arts.</p>
+                    </div>
+                </a>
+                
+                <a href="#news" class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="bg-dark-green text-white p-4 text-center">
+                        <i class="fas fa-calendar-alt text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">News & Events</h3>
+                    </div>
+                    <div class="p-4 text-gray-700">
+                        <p>Stay updated with the latest happenings and upcoming events at our school.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Feeds -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Connect With Us</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-md p-4">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-facebook text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-dark-green">Facebook</h3>
+                    </div>
+                    <div class="bg-white p-4 rounded border border-gray-200 text-center">
+                        <p class="text-gray-600 mb-4">Follow us on Facebook for live updates</p>
+                        <a href="#" class="text-light-green font-bold hover:underline">@QueenAnneSchool</a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-4">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-instagram text-pink-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-dark-green">Instagram</h3>
+                    </div>
+                    <div class="bg-white p-4 rounded border border-gray-200">
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t51.75761-15/499293932_18386558794186234_957129442020555673_n.jpg?stp=dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGo8WyDvCN9kbL-oJq2LGw2ZeLB_5a2BfVl4sH_lrYF9UMN8BX2nOYTPEzwcYBdnb1_v6GD560vvO9r2SAXTgJO&_nc_ohc=bkUgFAliJYcQ7kNvwE5UTq4&_nc_oc=AdlAcaMxmezOdhwY6sewe4bBMNl7-CDvUl3Pw-QqgI7opKrhLnwB5FRdiqhRlzAU6oA4rjmRmh0BLEBwW2fw1879&_nc_zt=23&se=-1&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=o72ih6VZdeDka-hqtY8m_w&oh=00_AfItrWaJteZ2bjPcUrNQ7g9uqlppLL-bZGEc7k0FrU_IxQ&oe=683A4F79" alt="Instagram post" class="rounded">
+                            <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/496120713_1110935134394435_8310558288148322368_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHCHIgsWUEsv_Vr8LbtCJ4E79HVwPpchz3v0dXA-lyHPXpNNEkBC5tBjixoMBV01oyWhFP4Xh7fwhSJGrHmzzwE&_nc_ohc=26l0rKyynKEQ7kNvwH6t4ki&_nc_oc=Adkc3sXp7Q0_jDj1cgGIXo-Pq7EoB8so6cUYY1b9r8vpxlBuNCHePlkVVge3VPAfmL-hBGIDM2i4UXk80wINZtYt&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=d8m2I11Rq0wjn5F8aKwQPQ&oh=00_AfKkywb-E6HeUbj_Bgtes_N715V1M1cK9RTho9do26iJ9Q&oe=683A1F62" alt="Instagram post" class="rounded">
+                            <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/496097056_1110887154399233_1040469980603934585_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHizVIt7wTjqB1PxNXOS-lIAbxmS5m5gpgBvGZLmbmCmMpJoXtgdbTdBIJFrm0e0isXoUkwNhTLmcg9BxXKpLqY&_nc_ohc=wRuJHFeFREYQ7kNvwEpXOZL&_nc_oc=Adn7vlMmOFJrRBjtWT2oLAwEBvsjAaBnqIHwEUc9O9MAXxbdhLLY_s50cXDmRZn_YdlQY2GqsEut_tSraKdAp5QE&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=m3BcLnOB9h27S6RLitA37Q&oh=00_AfJJgSgJjSBwBLQExbUzxmc_tH-svxjLo6l85MBCD83nTw&oe=683A23C0" alt="Instagram post" class="rounded">
+                            <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t51.75761-15/491898439_18384251578186234_1774408832437410418_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHoRJOrywzC1teyG1m_ijpTa2oxGm2AI-9rajEabYAj74JB_7bF2DIFmhChtXzTEQOlzGZC21j4BqHj506-8hk_&_nc_ohc=4HYv5AjX8_MQ7kNvwFQZ-lL&_nc_oc=AdlhGckQw9n9e3kxbi92uV7nTGfR1hS9hOlzpuTe207Ob-4Q1_hz8vOk_zYqot7_3IFQOZa8Qx2txSw9Lx-CuwoV&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=LJVVlqkC40SRXjCwTykzhQ&oh=00_AfJD6S_t-8Lq5hhC8fJveokIOBlMiYvG6-iIfZTY_BJpAw&oe=683A4892" alt="Instagram post" class="rounded">
+                            <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/494854416_1104923774995571_3883791483078802369_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3jx2htFP5de76UG8rLIW7LNFWGXUIyd4s0VYZdQjJ3vm2GHlt5Xwv288dy2yTzuKgY8Zp8jXE9pEzBiz2V7gJ&_nc_ohc=j402EDp9p7cQ7kNvwFhRw19&_nc_oc=AdkiIUxpR91dC_CGom4k1HZEk8q7PLmAfUWJ0Xu9bSDjkzdYEv308yAWEDEis6IqjFqDTyVNbMt9nB3iCyQIjD5h&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=oljKhyNxOZmTR2fTEYBXjw&oh=00_AfLxkVQJSFNtqXzYz8zZfWHn5XpinBTECce0nXjlTZ9Qfw&oe=683A201D" alt="Instagram post" class="rounded">
+                            <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t51.75761-15/494596847_18384178639186234_7469173730166743602_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFM5lLPv4lSbPMRWQQN5_tdtDDykZY9tyq0MPKRlj23Ks90rpLqLdVXXxv3Sz_68zef_Y7YiDGR6WvKuRX88Qo3&_nc_ohc=zpOVx4yjVJ8Q7kNvwFJMeic&_nc_oc=AdmiWXQ7Djf0Oqx2t7gZB12I37GWR3JDnsIfqPLURHZFXo_id2YqOpuYUuJvfFUNHu5OjDQEdSjUoqDBS7kMObEg&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=ZIR4R8H_TBuoE6wk2tFiTA&oh=00_AfJ0jVa5XUTi4VH9l1LJ0eMvieNi-JMMgzNTPexPqRdsEw&oe=683A46CA" alt="Instagram post" class="rounded">
+                        </div>
+                        <a href="#" class="text-light-green font-bold hover:underline text-center block">@queen_anne_school</a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-4">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-tiktok text-black text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-dark-green">TikTok</h3>
+                    </div>
+                    <div class="bg-white p-4 rounded border border-gray-200 text-center">
+                        <div class="relative pb-[56.25%] mb-4">
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@queen_anne_school/video/7454621841156525320" data-video-id="7454621841156525320" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@queen_anne_school" href="https://www.tiktok.com/@queen_anne_school?refer=embed">@queen_anne_school</a> ✨ Farewell, 2024. Hello, 2025! ✨ At Queen Anne School, we cherish the memories we&#39;ve created this year. As we look back on 2024, we&#39;re grateful for the growth, joy, and resilience we&#39;ve shared. Now, with hope and excitement, we welcome 2025 and the new adventures it holds. Thank you, 2024, for the journey. Hello, 2025—we&#39;re ready for what&#39;s next!  <a title="vamossentries" target="_blank" href="https://www.tiktok.com/tag/vamossentries?refer=embed">#VamosSentries</a> <a title="allforhim☝🏻💚" target="_blank" href="https://www.tiktok.com/tag/allforhim%E2%98%9D%F0%9F%8F%BB%F0%9F%92%9A?refer=embed">#allforhim☝🏻💚</a> <a title="proudqueenians" target="_blank" href="https://www.tiktok.com/tag/proudqueenians?refer=embed">#ProudQueenians</a>  <a title="goodbye2024" target="_blank" href="https://www.tiktok.com/tag/goodbye2024?refer=embed">#Goodbye2024</a> <a title="hello2025" target="_blank" href="https://www.tiktok.com/tag/hello2025?refer=embed">#Hello2025</a> <a title="happynewyear" target="_blank" href="https://www.tiktok.com/tag/happynewyear?refer=embed">#HappyNewYear</a> <a title="newbeginnings" target="_blank" href="https://www.tiktok.com/tag/newbeginnings?refer=embed">#NewBeginnings</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ suara asli  - zakye_muh" href="https://www.tiktok.com/music/suara-asli-zakyemuh-7451747449582668550?refer=embed">♬ suara asli  - zakye_muh</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                        </div>
+                        <a href="#" class="text-light-green font-bold hover:underline">@queen_anne_school</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">About Queen Anne School</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-dark-green mb-4">Our Story</h3>
+                    <p class="text-gray-700 mb-6">Founded in 1994 by Mrs. Aster B. Atutubo with just 48 Pre-School students at Mariquita Pueblo II, Queen Anne School has grown into a premier educational institution serving students from Pre-School to Senior High School.</p>
+                    <p class="text-gray-700">Our commitment to holistic education has remained steadfast through the years, as we continue to shape compassionate, competent leaders rooted in faith and service.</p>
+                </div>
+                <div class="relative">
+                    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/487559829_1078204967667452_6803738106609143584_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGsOOoaO7Qfy7m5IRpiqIvIXMrnIEx86KpcyucgTHzoqk3IVwMFWk4C40z6RjlSAy5fEiwwfF0IAv0B3WhozS4g&_nc_ohc=LQ_kCpwSIgsQ7kNvwG7YntS&_nc_oc=AdlAftO_7un3gDgl7uD20Xl5p3krq-1fsOLFHvSI1VERTY2mvwm26vtxMvB_XrLlZamh7_1wsYOgujF3YFhJgPgd&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=OLwOJoZ8AZ0offJpkWxmOQ&oh=00_AfLKCIJjQwQfAhkw3Kv7pOUSSMrTM6Llb3kkgzXFQBpUrg&oe=683A3B1D" alt="School building" class="rounded-lg shadow-lg w-full">
+                    <div class="absolute -bottom-4 -right-4 bg-gold text-dark-green p-4 rounded-lg shadow-lg">
+                        <p class="font-bold">Since 1994</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Our Journey</h3>
+                <div class="relative pl-10 timeline">
+                    <div class="mb-8 timeline-item relative pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">1994</h4>
+                            <p class="text-gray-700">Founded by Mrs. Aster B. Atutubo at Mariquita Pueblo II with 48 Pre-School students</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 timeline-item relative pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">1995–96</h4>
+                            <p class="text-gray-700">Tripled enrollment; added Elementary (Grades 1–6)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 timeline-item relative pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">1996–97</h4>
+                            <p class="text-gray-700">Relocated to 2,783 sqm lot at New Santa Rosa Homes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 timeline-item relative pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">1997–98</h4>
+                            <p class="text-gray-700">Opened High School; received DepEd recognition</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 timeline-item relative pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">2025</h4>
+                            <p class="text-gray-700">Launching TESDA Training & Assessment Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission & Vision -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-gold">
+                    <div class="text-gold text-4xl mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark-green mb-4">Our Mission</h3>
+                    <p class="text-gray-700 italic">"Shape compassionate, competent leaders rooted in faith."</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-gold">
+                    <div class="text-gold text-4xl mb-4">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark-green mb-4">Our Vision</h3>
+                    <p class="text-gray-700 italic">"To be the region's top institution for holistic student growth."</p>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="text-center mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8">Our Core Values</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-dark-green text-white px-6 py-3 rounded-full flex items-center">
+                        <span class="text-gold font-bold mr-2">F</span> Faith: #allforHIM
+                    </div>
+                    <div class="bg-dark-green text-white px-6 py-3 rounded-full flex items-center">
+                        <span class="text-gold font-bold mr-2">I</span> Integrity
+                    </div>
+                    <div class="bg-dark-green text-white px-6 py-3 rounded-full flex items-center">
+                        <span class="text-gold font-bold mr-2">R</span> Respect
+                    </div>
+                    <div class="bg-dark-green text-white px-6 py-3 rounded-full flex items-center">
+                        <span class="text-gold font-bold mr-2">S</span> Service
+                    </div>
+                    <div class="bg-dark-green text-white px-6 py-3 rounded-full flex items-center">
+                        <span class="text-gold font-bold mr-2">T</span> Teamwork
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Campus Locations -->
+            <div>
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Our Campus</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Sta. Rosa Campus</h4>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.4418241362155!2d121.12024457510013!3d14.285742586164101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d858d3f85c21%3A0xc7ee4f021b95f744!2sQueen%20Anne%20School%20of%20Sta.%20Rosa!5e0!3m2!1sen!2sph!4v1748254727269!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-700"><i class="fas fa-map-marker-alt text-light-green mr-2"></i> New Santa Rosa Homes, Sta. Rosa, Laguna</p>
+                            <p class="text-gray-700"><i class="fas fa-phone text-light-green mr-2"></i> (049) 502-0370</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Dasmariñas Campus</h4>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center">
+                            <p class="text-gray-500">Map coming soon</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-700"><i class="fas fa-map-marker-alt text-light-green mr-2"></i> Dasmariñas, Cavite</p>
+                            <p class="text-gray-700"><i class="fas fa-phone text-light-green mr-2"></i> Contact information coming soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Leadership -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">School Leadership</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-dark-green flex items-center justify-center">
+                        <i class="fas fa-user-tie text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Mrs. Aster B. Atutubo</h3>
+                        <p class="text-light-green font-semibold mb-4">Founder & Directress</p>
+                        <p class="text-gray-600">With a vision for holistic education, Mrs. Atutubo established Queen Anne School in 1994.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-dark-green flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Dr. Maria Santos</h3>
+                        <p class="text-light-green font-semibold mb-4">Principal</p>
+                        <p class="text-gray-600">Leading academic excellence and student development programs since 2010.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-dark-green flex items-center justify-center">
+                        <i class="fas fa-user-graduate text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Mr. Juan Dela Cruz</h3>
+                        <p class="text-light-green font-semibold mb-4">Academic Coordinator</p>
+                        <p class="text-gray-600">Oversees curriculum implementation and teacher development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Academic Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden program-card transition duration-300">
+                    <div class="bg-dark-green text-white p-6 text-center">
+                        <i class="fas fa-child text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Pre-School</h3>
+                        <p class="text-gold">Ages 3–5</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4"><strong>Approach:</strong> Activity-Centered Learning</p>
+                        <p class="text-gray-700 mb-4"><strong>Daily Activities:</strong> Circle Time, Motor Skills, Music & Art, Storytelling</p>
+                        <p class="text-gray-700"><strong>Enrollment:</strong> Open Year-Round, Loyalty Scholarships</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden program-card transition duration-300">
+                    <div class="bg-dark-green text-white p-6 text-center">
+                        <i class="fas fa-pencil-alt text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Elementary</h3>
+                        <p class="text-gold">Grades 1–6</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4"><strong>Curriculum:</strong> Core Subjects + STEAM Labs</p>
+                        <p class="text-gray-700 mb-4"><strong>Clubs:</strong> Science Club, Math Olympiad, Art & Music Ensembles</p>
+                        <p class="text-gray-700"><strong>Scholarships:</strong> Academic, Athletic, Sibling Discount</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden program-card transition duration-300">
+                    <div class="bg-dark-green text-white p-6 text-center">
+                        <i class="fas fa-book text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Junior High</h3>
+                        <p class="text-gold">Grades 7–10</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4"><strong>Accreditation:</strong> DepEd-ESC Accredited (₱9,000/year Grade 7)</p>
+                        <p class="text-gray-700 mb-4"><strong>Partnerships:</strong> City Scholar & Athletic Scholar programs</p>
+                        <p class="text-gray-700"><strong>Programs:</strong> Robotics, Debate, Community Service</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden program-card transition duration-300">
+                    <div class="bg-dark-green text-white p-6 text-center">
+                        <i class="fas fa-graduation-cap text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Senior High</h3>
+                        <p class="text-gold">Grades 11–12</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4"><strong>Tracks:</strong> STEM, ABM, HUMSS, GAS</p>
+                        <p class="text-gray-700 mb-4"><strong>Financial Aid:</strong> SHS Voucher: Full coverage, no top-up</p>
+                        <p class="text-gray-700"><strong>Career Prep:</strong> Internship & On-the-Job Training Partners</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Future Programs -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                <div class="bg-gradient-to-r from-dark-green to-light-green text-white p-6">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Future Programs</h3>
+                            <p class="text-gold">Expanding opportunities for technical education</p>
+                        </div>
+                        <div id="countdown" class="flex space-x-4 mt-4 md:mt-0">
+                            <div class="text-center">
+                                <div class="bg-white text-dark-green font-bold rounded-lg py-2 px-4 text-xl">00</div>
+                                <div class="text-xs mt-1">Days</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white text-dark-green font-bold rounded-lg py-2 px-4 text-xl">00</div>
+                                <div class="text-xs mt-1">Hours</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white text-dark-green font-bold rounded-lg py-2 px-4 text-xl">00</div>
+                                <div class="text-xs mt-1">Minutes</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-white text-dark-green font-bold rounded-lg py-2 px-4 text-xl">00</div>
+                                <div class="text-xs mt-1">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold text-dark-green mb-4">TESDA Training Center</h4>
+                    <p class="text-gray-700 mb-4">Queen Anne School is proud to announce the upcoming launch of our TESDA Training & Assessment Center, offering short courses in:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <i class="fas fa-laptop-code text-light-green text-2xl mr-3"></i>
+                            <span>Information Technology</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <i class="fas fa-utensils text-light-green text-2xl mr-3"></i>
+                            <span>Hospitality</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <i class="fas fa-car text-light-green text-2xl mr-3"></i>
+                            <span>Automotive</span>
+                        </div>
+                    </div>
+                    <div class="bg-gold text-dark-green font-bold px-6 py-3 rounded-lg inline-block">Coming Soon in 2025</div>
+                </div>
+            </div>
+            
+            <!-- Academic Calendar -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-dark-green text-white p-6">
+                    <h3 class="text-2xl font-bold">Academic Calendar 2024-2025</h3>
+                </div>
+                <div class="p-6">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="py-3 px-4 text-left text-dark-green font-bold">Event</th>
+                                    <th class="py-3 px-4 text-left text-dark-green font-bold">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-3 px-4">Opening of Classes</td>
+                                    <td class="py-3 px-4">June 3, 2024</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 bg-gray-50">
+                                    <td class="py-3 px-4">Midterm Examinations</td>
+                                    <td class="py-3 px-4">September 16-20, 2024</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-3 px-4">Semestral Break</td>
+                                    <td class="py-3 px-4">October 14-18, 2024</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 bg-gray-50">
+                                    <td class="py-3 px-4">Final Examinations</td>
+                                    <td class="py-3 px-4">December 9-13, 2024</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-3 px-4">Christmas Break</td>
+                                    <td class="py-3 px-4">December 16, 2024 - January 5, 2025</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 bg-gray-50">
+                                    <td class="py-3 px-4">Graduation Ceremony</td>
+                                    <td class="py-3 px-4">May 30, 2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Admissions</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6 text-center">Operating Hours</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Monday - Friday</p>
+                                <p class="text-gray-600">8:00 AM – 5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Saturday</p>
+                                <p class="text-gray-600">8:00 AM – 4:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4">
+                                <i class="fas fa-calendar-times"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Sunday</p>
+                                <p class="text-gray-600">Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6 text-center">Enrollment Steps</ 3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1">1</div>
+                            <div>
+                                <p class="font-semibold">Online Inquiry Form</p>
+                                <p class="text-gray-600 text-sm">Complete our online application form</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1">2</div>
+                            <div>
+                                <p class="font-semibold">Document Submission</p>
+                                <p class="text-gray-600 text-sm">Submit birth certificate, report cards, etc.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1">3</div>
+                            <div>
+                                <p class="font-semibold">Assessment Schedule</p>
+                                <p class="text-gray-600 text-sm">Schedule and complete entrance assessment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1">4</div>
+                            <div>
+                                <p class="font-semibold">Fee Payment & Registration</p>
+                                <p class="text-gray-600 text-sm">Complete payment and registration process</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6 text-center">Contact Admissions</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:QAS@QueenAnneSchool.org" class="text-light-green hover:underline">QAS@QueenAnneSchool.org</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <a href="tel:+63495020370" class="text-light-green hover:underline">(049) 502-0370</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Live Chat</p>
+                                <button onclick="openChat()" class="text-light-green hover:underline">Click to chat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tuition & Fees -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-6 text-center">Tuition & Fees (2024-2025 Academic Year)</h3>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-dark-green text-white">
+                                <tr>
+                                    <th class="py-3 px-4 text-left">Level</th>
+                                    <th class="py-3 px-4 text-left">Tuition Fee</th>
+                                    <th class="py-3 px-4 text-left">Miscellaneous</th>
+                                    <th class="py-3 px-4 text-left">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 px-4">Pre-School</td>
+                                    <td class="py-3 px-4">₱25,000</td>
+                                    <td class="py-3 px-4">₱8,000</td>
+                                    <td class="py-3 px-4">₱33,000</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4">Elementary (Grades 1-6)</td>
+                                    <td class="py-3 px-4">₱28,000</td>
+                                    <td class="py-3 px-4">₱10,000</td>
+                                    <td class="py-3 px-4">₱38,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Junior High (Grades 7-10)</td>
+                                    <td class="py-3 px-4">₱32,000</td>
+                                    <td class="py-3 px-4">₱12,000</td>
+                                    <td class="py-3 px-4">₱44,000</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4">Senior High (Grades 11-12)</td>
+                                    <td class="py-3 px-4">₱35,000</td>
+                                    <td class="py-3 px-4">₱15,000</td>
+                                    <td class="py-3 px-4">₱50,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-4 bg-gray-50">
+                        <p class="text-sm text-gray-600">* Fees are per academic year and may be paid in installments. Additional discounts available for siblings and scholars.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scholarship Programs -->
+            <div>
+                <h3 class="text-2xl font-bold text-dark-green mb-6 text-center">Scholarship Programs</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                        <h4 class="text-xl font-bold text-dark-green mb-3">Academic Scholarship</h4>
+                        <p class="text-gray-700 mb-4">For students with outstanding academic performance (90% and above average).</p>
+                        <div class="text-gold font-semibold">Up to 100% tuition discount</div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                        <h4 class="text-xl font-bold text-dark-green mb-3">Athletic Scholarship</h4>
+                        <p class="text-gray-700 mb-4">For students excelling in sports like basketball, volleyball, badminton, and martial arts.</p>
+                        <div class="text-gold font-semibold">50-75% tuition discount</div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                        <h4 class="text-xl font-bold text-dark-green mb-3">Loyalty Scholarship</h4>
+                        <p class="text-gray-700 mb-4">For students who have been with Queen Anne School since Pre-School.</p>
+                        <div class="text-gold font-semibold">20% tuition discount</div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                        <h4 class="text-xl font-bold text-dark-green mb-3">City Scholar Program</h4>
+                        <p class="text-gray-700 mb-4">Partnership with local government for deserving students.</p>
+                        <div class="text-gold font-semibold">Full tuition coverage</div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                        <h4 class="text-xl font-bold text-dark-green mb-3">DepEd ESC</h4>
+                        <p class="text-gray-700 mb-4">Education Service Contracting program for Junior High students.</p>
+                        <div class="text-gold font-semibold">₱9,000/year subsidy</div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gold">
+                        <h4 class="text-xl font-bold text-dark-green mb-3">Sibling Discount</h4>
+                        <p class="text-gray-700 mb-4">For families with multiple children enrolled at Queen Anne School.</p>
+                        <div class="text-gold font-semibold">10% discount per sibling</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section id="campus-life" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Campus Life & Activities</h2>
+            
+            <!-- Clubs & Organizations -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Clubs & Organizations</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-dark-green flex items-center justify-center">
+                            <i class="fas fa-chess text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">Chess Sentries</h4>
+                            <p class="text-gray-700 mb-4">Join our competitive chess team and develop strategic thinking skills.</p>
+                            <div class="bg-gold text-dark-green text-sm font-bold px-3 py-1 rounded-full inline-block">Tryouts: May 10, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-dark-green flex items-center justify-center">
+                            <i class="fas fa-volleyball-ball text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">Volleyball & Basketball Sentries</h4>
+                            <p class="text-gray-700 mb-4">Represent Queen Anne in inter-school competitions.</p>
+                            <div class="space-y-2">
+                                <div class="bg-gold text-dark-green text-sm font-bold px-3 py-1 rounded-full inline-block">Girls: May 2</div>
+                                <div class="bg-gold text-dark-green text-sm font-bold px-3 py-1 rounded-full inline-block">Boys: May 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-dark-green flex items-center justify-center">
+                            <i class="fas fa-dumbbell text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">Badminton Team</h4>
+                            <p class="text-gray-700 mb-4">Train with our coaches and compete in regional tournaments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-dark-green flex items-center justify-center">
+                            <i class="fas fa-music text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">Chorale: Melodia</h4>
+                            <p class="text-gray-700 mb-4">Participate in group and solo singing competitions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-dark-green flex items-center justify-center">
+                            <i class="fas fa-fist-raised text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">Karate Club</h4>
+                            <p class="text-gray-700 mb-4">Learn self-discipline and compete in martial arts tournaments.</p>
+                            <div class="bg-gold text-dark-green text-sm font-bold px-3 py-1 rounded-full inline-block">Unbeatable Ikigai</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-dark-green flex items-center justify-center">
+                            <i class="fas fa-users text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-2">Community Helpers</h4>
+                            <p class="text-gray-700 mb-4">Participate in outreach programs and community service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Annual Events -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Annual Events Calendar</h3>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-4 text-center">April</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">1</div>
+                                    <div>
+                                        <p class="font-semibold">Sports Fest</p>
+                                        <p class="text-gray-600 text-sm">Intramural competitions</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">15</div>
+                                    <div>
+                                        <p class="font-semibold">Basketball Tryouts</p>
+                                        <p class="text-gray-600 text-sm">For varsity team selection</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-4 text-center">May</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">5</div>
+                                    <div>
+                                        <p class="font-semibold">Science Fair</p>
+                                        <p class="text-gray-600 text-sm">Student research projects</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">10</div>
+                                    <div>
+                                        <p class="font-semibold">Chess Tryouts</p>
+                                        <p class="text-gray-600 text-sm">For competitive team</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">30</div>
+                                    <div>
+                                        <p class="font <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">30</div>
+                                    <div>
+                                        <p class="font-semibold">Graduation</p>
+                                        <p class="text-gray-600 text-sm">Commencement ceremony</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-4 text-center">July</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">15</div>
+                                    <div>
+                                        <p class="font-semibold">Intramurals</p>
+                                        <p class="text-gray-600 text-sm">School-wide competitions</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">25</div>
+                                    <div>
+                                        <p class="font-semibold">Cultural Show</p>
+                                        <p class="text-gray-600 text-sm">Arts and culture exhibition</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-dark-green mb-4 text-center">October</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">8</div>
+                                    <div>
+                                        <p class="font-semibold">Community Outreach</p>
+                                        <p class="text-gray-600 text-sm">Service learning week</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Achievements & Awards</h2>
+            
+            <!-- Sports Achievements -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Sports Excellence</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-white text-6xl mb-4">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Basketball 15U Champions</h4>
+                        <p class="text-yellow-100 mb-4">SLCUAA Champions 2025</p>
+                        <div class="bg-white text-yellow-600 font-bold px-4 py-2 rounded-full">🏆 GOLD</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-white text-6xl mb-4">
+                            <i class="fas fa-volleyball-ball"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Volleyball Team</h4>
+                        <p class="text-gray-100 mb-4">SLCUAA Tournament</p>
+                        <div class="bg-white text-gray-600 font-bold px-4 py-2 rounded-full">🥈 SILVER</div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-white text-6xl mb-4">
+                            <i class="fas fa-table-tennis"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Badminton Team</h4>
+                        <p class="text-orange-100 mb-4">Brent Invitational</p>
+                        <div class="bg-white text-orange-600 font-bold px-4 py-2 rounded-full">🥉 BRONZE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Martial Arts -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Martial Arts Mastery</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="bg-red-600 text-white p-4">
+                            <h4 class="text-xl font-bold flex items-center">
+                                <i class="fas fa-fist-raised mr-3"></i>
+                                Karate Achievements
+                            </h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">🥇</div>
+                                    <div>
+                                        <p class="font-semibold">Multiple Medals at Ikigai 2</p>
+                                        <p class="text-gray-600 text-sm">March 8, 2025</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">🏆</div>
+                                    <div>
+                                        <p class="font-semibold">Gov. R. Hernandez Cup</p>
+                                        <p class="text-gray-600 text-sm">February 1, 2025</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">🥉</div>
+                                    <div>
+                                        <p class="font-semibold">Yohan Merluza - National Bronze</p>
+                                        <p class="text-gray-600 text-sm">Karate Pilipinas Nationals</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="bg-purple-600 text-white p-4">
+                            <h4 class="text-xl font-bold flex items-center">
+                                <i class="fas fa-music mr-3"></i>
+                                Performing Arts
+                            </h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">🥈</div>
+                                    <div>
+                                        <p class="font-semibold">Sayaw Hataw XVII</p>
+                                        <p class="text-gray-600 text-sm">1st Runner-Up</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">🏆</div>
+                                    <div>
+                                        <p class="font-semibold">SLCUAA Group Singing</p>
+                                        <p class="text-gray-600 text-sm">Champions</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-gold text-dark-green font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">🥉</div>
+                                    <div>
+                                        <p class="font-semibold">Vocal Solo & Duet</p>
+                                        <p class="text-gray-600 text-sm">2nd Runner-Up & Participants</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Student Spotlights -->
+            <div>
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Student Spotlights</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-dark-green to-light-green flex items-center justify-center">
+                            <i class="fas fa-user-graduate text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-bold text-dark-green mb-2">Maria Santos</h4>
+                            <p class="text-light-green font-semibold mb-2">Class Valedictorian 2024</p>
+                            <p class="text-gray-600 text-sm italic">"Queen Anne School shaped me into who I am today. The holistic education approach prepared me not just academically, but as a person of character."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-dark-green to-light-green flex items-center justify-center">
+                            <i class="fas fa-basketball-ball text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-bold text-dark-green mb-2">John Cruz</h4>
+                            <p class="text-light-green font-semibold mb-2">Basketball Team Captain</p>
+                            <p class="text-gray-600 text-sm italic">"The discipline and teamwork I learned here helped our team win the championship. Queen Anne School believes in excellence in all areas."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-dark-green to-light-green flex items-center justify-center">
+                            <i class="fas fa-fist-raised text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-bold text-dark-green mb-2">Yohan Merluza</h4>
+                            <p class="text-light-green font-semibold mb-2">National Karate Medalist</p>
+                            <p class="text-gray-600 text-sm italic">"Representing Queen Anne School at the national level is an honor. The support from my coaches and school community is incredible."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Announcements Section -->
+    <section id="news" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">News & Announcements</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main News -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+                        <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t51.75761-15/499293932_18386558794186234_957129442020555673_n.jpg?stp=dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGo8WyDvCN9kbL-oJq2LGw2ZeLB_5a2BfVl4sH_lrYF9UMN8BX2nOYTPEzwcYBdnb1_v6GD560vvO9r2SAXTgJO&_nc_ohc=bkUgFAliJYcQ7kNvwE5UTq4&_nc_oc=AdlAcaMxmezOdhwY6sewe4bBMNl7-CDvUl3Pw-QqgI7opKrhLnwB5FRdiqhRlzAU6oA4rjmRmh0BLEBwW2fw1879&_nc_zt=23&se=-1&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=KK0V1lkdSOp8B_cRp8dQdA&oh=00_AfKz-Ky4SlpTyBczWqkWaSiZQNxLTgKepA-5WsxdsVPeFQ&oe=683A4F79" alt="TESDA Center" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-gold text-dark-green text-xs font-bold px-3 py-1 rounded-full mr-2">FEATURED</span>
+                                <span class="text-gray-500 text-sm">May 25, 2025</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark-green mb-4">New Windows PCs Arrive at TESDA Training Center</h3>
+                            <p class="text-gray-700 mb-4">Queen Anne School is excited to announce the arrival of brand new Windows PC units for our upcoming TESDA Training & Assessment Center. These state-of-the-art computers will enhance our technical education programs in IT, providing students with modern tools for learning programming, digital design, and computer applications.</p>
+                            <a href="#" class="text-light-green font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t51.75761-15/491515930_18383505004186234_1219723438161415087_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFR8ccel7dS3ypLbGsIM9Ucd9PQRlhWv31309BGWFa_fXlFCytJLG4xsv5lUCmxIigI_5sUWy7GpWmg0PRU8ITz&_nc_ohc=mN1AFRY0AeIQ7kNvwFHQTdc&_nc_oc=Adn4WEvjkUx3bWU_fEnnKIfi7VGplOg9DkR7OPDoGARRULtSwG5M7uCgeVuRMefnHhvZE5d3pE6UX6z-M4hHf5Sz&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=bPkQmnTrUQY1w4JIz_tCTw&oh=00_AfJtsdGwyLYaNQObgbmGN2Qr4ViM1Ca8Hu8659TnUo12UQ&oe=683A34E6" alt="Graduation" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-light-green text-white text-xs font-bold px-2 py-1 rounded mr-2">EVENT</span>
+                                    <span class="text-gray-500 text-sm">May 20, 2025</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-dark-green mb-2">Congratulations Batch 2025!</h4>
+                                <p class="text-gray-600 text-sm">Our heartfelt congratulations to all graduating students. Your hard work and dedication have paid off.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/494854416_1104923774995571_3883791483078802369_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3jx2htFP5de76UG8rLIW7LNFWGXUIyd4s0VYZdQjJ3vm2GHlt5Xwv288dy2yTzuKgY8Zp8jXE9pEzBiz2V7gJ&_nc_ohc=j402EDp9p7cQ7kNvwFhRw19&_nc_oc=AdkiIUxpR91dC_CGom4k1HZEk8q7PLmAfUWJ0Xu9bSDjkzdYEv308yAWEDEis6IqjFqDTyVNbMt9nB3iCyQIjD5h&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=48wdqJ3pKmGJeFxTOpBmbA&oh=00_AfJmb2CEATpJ99RS4POWBXfNbbMndc9VOoYM3s7kowxn2g&oe=683A585D" alt="Sports tryouts" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded mr-2">URGENT</span>
+                                    <span class="text-gray-500 text-sm">May 18, 2025</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-dark-green mb-2">Sports Tryouts Reminder</h4>
+                                <p class="text-gray-600 text-sm">Don't miss the upcoming tryouts for volleyball, basketball, and chess teams. Registration is now open.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div>
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Upcoming Events</h4>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-gold pl-4">
+                                <p class="font-semibold text-dark-green">Chess Tryouts</p>
+                                <p class="text-sm text-gray-600">May 10, 2025 • 2:00 PM</p>
+                            </div>
+                            <div class="border-l-4 border-gold pl-4">
+                                <p class="font-semibold text-dark-green">Science Fair</p>
+                                <p class="text-sm text-gray-600">May 5, 2025 • All Day</p>
+                            </div>
+                            <div class="border-l-4 border-gold pl-4">
+                                <p class="font-semibold text-dark-green">Volleyball Tryouts (Girls)</p>
+                                <p class="text-sm text-gray-600">May 2, 2025 • 3:00 PM</p>
+                            </div>
+                            <div class="border-l-4 border-gold pl-4">
+                                <p class="font-semibold text-dark-green">Basketball Tryouts (Boys)</p>
+                                <p class="text-sm text-gray-600">May 3, 2025 • 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h4 class="text-xl font-bold text-dark-green mb-4">Quick Links</h4>
+                        <div class="space-y-2">
+                            <a href="#admissions" class="block text-light-green hover:underline">📝 Enrollment Information</a>
+                            <a href="#academics" class="block text-light-green hover:underline">📚 Academic Programs</a>
+                            <a href="#achievements" class="block text-light-green hover:underline">🏆 Student Achievements</a>
+                            <a href="#gallery" class="block text-light-green hover:underline">📸 Photo Gallery</a>
+                            <a href="#contact" class="block text-light-green hover:underline">📞 Contact Information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Gallery</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="gallery-filter active bg-dark-green text-white px-6 py-2 rounded-full font-semibold" data-filter="all">All</button>
+                <button class="gallery-filter bg-gray-200 text-dark-green px-6 py-2 rounded-full font-semibold hover:bg-light-green hover:text-white transition" data-filter="graduation">Graduation</button>
+                <button class="gallery-filter bg-gray-200 text-dark-green px-6 py-2 rounded-full font-semibold hover:bg-light-green hover:text-white transition" data-filter="sports">Sports</button>
+                <button class="gallery-filter bg-gray-200 text-dark-green px-6 py-2 rounded-full font-semibold hover:bg-light-green hover:text-white transition" data-filter="arts">Arts</button>
+                <button class="gallery-filter bg-gray-200 text-dark-green px-6 py-2 rounded-full font-semibold hover:bg-light-green hover:text-white transition" data-filter="community">Community</button>
+            </div>
+            
+            <!-- Photo Gallery -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                <div class="gallery-item-img graduation" data-category="graduation">
+                    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t51.75761-15/491515930_18383505004186234_1219723438161415087_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFR8ccel7dS3ypLbGsIM9Ucd9PQRlhWv31309BGWFa_fXlFCytJLG4xsv5lUCmxIigI_5sUWy7GpWmg0PRU8ITz&_nc_ohc=mN1AFRY0AeIQ7kNvwFHQTdc&_nc_oc=Adn4WEvjkUx3bWU_fEnnKIfi7VGplOg9DkR7OPDoGARRULtSwG5M7uCgeVuRMefnHhvZE5d3pE6UX6z-M4hHf5Sz&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=i-XCVHMqYHr83nAZNsuFew&oh=00_AfJqOztfY3QMNAq_u9sImNzOHelF9IqbFJa1skqOGm4OEw&oe=683A34E6" alt="Graduation Ceremony" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img sports" data-category="sports">
+                    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t51.75761-15/489012920_18381198316186234_5849894733310975778_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE_wWooxR6ApegmxN0sFNBamCVqbe3T7-qYJWpt7dPv6hE9AjX8MXwoLnjcB439v1lw0ITFml2ZHvpjgkPfn3Zf&_nc_ohc=8-0kh50mNSAQ7kNvwEEYt_H&_nc_oc=Admkfkr4OL3jKwM_r47foFvM5XqPmHQjmEvL2GeXVsYaJjkXI3gNoKZtcsXsMyHN8cUWpJgiQN8HK_OeeKsS0xf_&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=W46yeIo5txoSATqFKQ2mkg&oh=00_AfIClz7xQmttL1p5aH-BY1ttXTWdzejaXYY-XEVgzsFYfg&oe=683A5864" alt="Basketball Game" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img arts" data-category="arts">
+                    <img src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/487554024_1077795977708351_5153948559956255060_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeE8bc4NGsfD9u0pjsOv7mew5Agrl0kOnAnkCCuXSQ6cCVqrsXHhvvZKR5wQZQZ9MP1fEQ-zQrU6Pa_LsB0omU69&_nc_ohc=jkF5sFOeWwoQ7kNvwG7ZH7c&_nc_oc=Adl95603AOyNoYVDG2dBKQqpa8h8sgazyaNZXpRv-ueAdMDIMLA1s_HHAqLzuOnNlKIRUq1FFIX7XwUAvT7jYsr6&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=dOx5S6PZT7cYsSaPeR8_9g&oh=00_AfL79-U8ZgSvoeskbFD3zgh2opNpWVzGx5KIStdKpk6nQQ&oe=683A3651" alt="" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img community" data-category="community">
+                    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/487801806_1078205274334088_9219675036860719912_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHZ3lW1QTfa1_WTzIzf2jPEbmn_AKcEpoFuaf8ApwSmgRdNK-ynVJ2L_Z-1JFZjpg5spealldopagIDWI1z1ajL&_nc_ohc=QPd95P8L6wgQ7kNvwGsdYU3&_nc_oc=Adm-EN3AgX4UHS0dyBmepIacYAEOk66ADJkEmGstrNQveBh0JV2O6zA2bNRXd7xydYzUToqxesPhK55UPzW46LT5&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=c3UGr5jyZM6_gtIcA_0H0g&oh=00_AfKkg1j1zRlnH9tdDnoQOitYP1jCHlv9MA76lgQZfjDCOA&oe=683A54E4" alt="" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img graduation" data-category="graduation">
+                    <img src="https://scontent.fcrk3-2.fna.fbcdn.net/v/t51.75761-15/491510650_18383403703186234_8269931098075285748_n.jpg?stp=dst-jpegr_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGIYP5I1Io5VCsdplwVtPjwsiMUjqH1XSmyIxSOofVdKVTFv3AJbqNHFmzVI97x9yLicBtVK1llZ_W0FnKculrl&_nc_ohc=9GKcQ7GeYtEQ7kNvwH9-Bzy&_nc_oc=AdknIkyP4hLNKz7AFYZ1aOQp34e71q9yyIcLis_HbzY281tBuRHfwI_zrzr9bvIfXRY7axTi7DcCsjKc39nSJmSY&_nc_zt=23&se=-1&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=-4PA7XwJt6rbdA7NZp4iyg&oh=00_AfIk3NShuLY836euCl0KtgvG6ijTPHOJM0J5II7no8x4vA&oe=683A2BC4" alt="" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img sports" data-category="sports">
+                    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t51.75761-15/484170218_18378044419186234_3065322528192989309_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG8tHyAY-4t9WMgcCgFM0hs06nFLLF_75_TqcUssX_vn2k8X3fb4tx9dR9ETS_VB-EIc8CJnmPQngztWdLO_jXv&_nc_ohc=JtQ3mDfgfRIQ7kNvwGDdAU9&_nc_oc=Adk2Pci9CjZfHv0m_GfYmnxgmpvuj6BdG72Hbu4XQYtMYv4GpNpPYAZAAWjTsCQ9at_jOBJg097WXkn6mPYQ5iwt&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=VhgYT52exoZrS4kLx2QD9A&oh=00_AfJuYYHcm9uzyC3_oEJr0Syg8sdSh7N9XF5OEKjfVgPbnQ&oe=683A24D7" alt="" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img arts" data-category="arts">
+                    <img src="https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/488006274_1077798334374782_2663675939840443128_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeH8268JRpm-6pZisS0gRL_xFCd5h-mfcfEUJ3mH6Z9x8U37pSU0hFz9Z9ciIw_bJfEo_fVEQyoSbJzJ5pIHmIzL&_nc_ohc=hVrBPk0to7UQ7kNvwHnPVWy&_nc_oc=Adks7CpYdWsmlCVg31OVLu1wEOeK8IHYYwiTyrivmuX2wpzQiPEFYLFzDer8MCyGLv2-iZL8ni9yQx-TxwyYXECG&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=XjfNyG6yv8G0-Zy1e5XPow&oh=00_AfI92Re4UTgKmpgcf-3d3MkUddmoGKrezDfEqpjdn2AIjw&oe=683A4274" alt="" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+                <div class="gallery-item-img community" data-category="community">
+                    <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/487455764_1079225767565372_8009540089225804539_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeH9r_GXBQaxH9WHjbuSbOcndkK9WHDJ5Pd2Qr1YcMnk96XWvzvQO32E2twxUQmLVlEenXBy0W4Gav83CRBsLf48&_nc_ohc=RCVpvn5F5pQQ7kNvwF1TE-P&_nc_oc=AdnBRgj7AjfrRoT64qmvNDw9xIZ7QynOK4jUAHgQPMAcpDqa7g6efpsHHmzRtV0eJ1MKA_7-O15sYpiQEArWAX8Z&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=_dVl0VurMY02vQiB_7OahQ&oh=00_AfIBKXZOOvsxnaUCT76u8t1wQIzndw_jHUgMbNQI_nlbgQ&oe=683A4750" alt="" class="w-full h-48 object-cover rounded-lg shadow-md cursor-pointer transition transform hover:scale-105">
+                </div>
+            </div>
+            
+            <!-- Video Highlights -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-dark-green mb-8 text-center">Video Highlights</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-light-green text-6xl mb-2"></i>
+                                    <p class="text-gray-600">Graduation 2025 Highlights</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition cursor-pointer">
+                                <button class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg">
+                                    <i class="fas fa-play mr-2"></i>Play Video
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-dark-green">Batch 2025 Graduation</h4>
+                            <p class="text-gray-600 text-sm">Celebrating our graduates' achievements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-light-green text-6xl mb-2"></i>
+                                    <p class="text-gray-600">Sports Champions 2025</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition cursor-pointer">
+                                <button class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg">
+                                    <i class="fas fa-play mr-2"></i>Play Video
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-dark-green">Championship Journey</h4>
+                            <p class="text-gray-600 text-sm">Our path to basketball victory</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-light-green text-6xl mb-2"></i>
+                                    <p class="text-gray-600">Student Testimonials</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition cursor-pointer">
+                                <button class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg">
+                                    <i class="fas fa-play mr-2"></i>Play Video
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-dark-green">Student Stories</h4>
+                            <p class="text-gray-600 text-sm">Hear from our amazing students</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12">Contact & Connect</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-green mb-1">Sta. Rosa Campus</h4>
+                                <p class="text-gray-700">New Santa Rosa Homes, Sta. Rosa, Laguna, Philippines</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-green mb-1">Phone</h4>
+                                <p class="text-gray-700">(049) 502-0370</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-green mb-1">Email</h4>
+                                <p class="text-gray-700">QAS@QueenAnneSchool.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gold text-dark-green p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-green mb-1">Office Hours</h4>
+                                <p class="text-gray-700">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                <p class="text-gray-700">Saturday: 8:00 AM - 4:00 PM</p>
+                                <p class="text-gray-700">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mt-8">
+                        <h4 class="font-bold text-dark-green mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon bg-black text-white p-3 rounded-full hover:bg-gray-800 transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Send us a Message</h3>
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-dark-green font-semibold mb-2">Inquiry Type</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                                <option>General Inquiry</option>
+                                <option>Admissions</option>
+                                <option>Scholarships</option>
+                                <option>Academic Programs</option>
+                                <option>Sports Programs</option>
+                                <option>TESDA Training</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-dark-green font-semibold mb-2">Message *</label>
+                            <textarea required rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" required class="mt-1 mr-2">
+                                <label class="text-sm text-gray-600">I agree to the processing of my personal data in accordance with the Data Privacy Act and Queen Anne School's privacy policy.</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-dark-green text-white font-bold py-3 px-6 rounded-lg hover:bg-light-green transition">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="" class="h-10 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">Queen Anne School</h3>
+                            <p class="text-gold text-sm">Est. 1994</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Shaping compassionate, competent leaders rooted in faith through holistic education since 1994.</p>
+                    <div class="text-gold font-semibold">#allforHIM</div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-gold transition">About Us</a></li>
+                        <li><a href="#academics" class="text-gray-300 hover:text-gold transition">Academics</a></li>
+                        <li><a href="#admissions" class="text-gray-300 hover:text-gold transition">Admissions</a></li>
+                        <li><a href="#campus-life" class="text-gray-300 hover:text-gold transition">Campus Life</a></li>
+                        <li><a href="#achievements" class="text-gray-300 hover:text-gold transition">Achievements</a></li>
+                        <li><a href="#news" class="text-gray-300 hover:text-gold transition">News</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Programs -->
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Programs</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-300">Pre-School (Ages 3-5)</span></li>
+                        <li><span class="text-gray-300">Elementary (Grades 1-6)</span></li>
+                        <li><span class="text-gray-300">Junior High (Grades 7-10)</span></li>
+                        <li><span class="text-gray-300">Senior High (Grades 11-12)</span></li>
+                        <li><span class="text-gray-300">TESDA Training (Coming Soon)</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mr-2 mt-1"></i>
+                            <span class="text-gray-300 text-sm">New Santa Rosa Homes, Sta. Rosa, Laguna</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gold mr-2"></i>
+                            <span class="text-gray-300">(049) 502-0370</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <span class="text-gray-300">QAS@QueenAnneSchool.org</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-3 mt-4">
+                        <a href="#" class="text-gray-300 hover:text-gold transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition text-xl">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm mb-4 md:mb-0">
+                        © 2025 Queen Anne School of Sta. Rosa & Dasmariñas. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-300 hover:text-gold transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition">Terms of Service</a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition">Data Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-gold text-dark-green p-3 rounded-full shadow-lg hover:bg-yellow-500 transition opacity-0 pointer-events-none">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hero Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.slide-indicator');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? '1' : '0';
+            });
+            indicators.forEach((indicator, i) => {
+                indicator.style.backgroundColor = i === index ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.5)';
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
+        
+        // Manual slide control
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // TESDA Countdown Timer (placeholder)
+        function updateCountdown() {
+            const countdownElements = document.querySelectorAll('#countdown > div > div:first-child');
+            const now = new Date().getTime();
+            const targetDate = new Date('2025-08-01').getTime();
+            const timeLeft = targetDate - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                if (countdownElements.length >= 4) {
+                    countdownElements[0].textContent = days.toString().padStart(2, '0');
+                    countdownElements[1].textContent = hours.toString().padStart(2, '0');
+                    countdownElements[2].textContent = minutes.toString().padStart(2, '0');
+                    countdownElements[3].textContent = seconds.toString().padStart(2, '0');
+                }
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Gallery Filter
+        const galleryFilters = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item-img');
+        
+        galleryFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                const category = filter.getAttribute('data-filter');
+                
+                // Update active filter button
+                galleryFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-dark-green', 'text-white');
+                    f.classList.add('bg-gray-200', 'text-dark-green');
+                });
+                filter.classList.add('active', 'bg-dark-green', 'text-white');
+                filter.classList.remove('bg-gray-200', 'text-dark-green');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Utility Functions
+        function openGallery() {
+            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function openChat() {
+            alert('Live chat feature coming soon! Please email us at QAS@QueenAnneSchool.org or call (049) 502-0370.');
+        }
+
+        // Initialize animations on scroll (simple implementation)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.program-card, .gallery-item, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

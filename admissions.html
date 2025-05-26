@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Queen Anne School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;500;700&display=swap');
+        
+        :root {
+            --dark-green: #113b23;
+            --light-green: #78ac61;
+            --gold: #f3c317;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+                        color: var(--dark-green);
+
+        }
+        
+        .bg-dark-green { background-color: var(--dark-green); }
+        .bg-light-green { background-color: var(--light-green); }
+        .bg-gold { background-color: var(--gold); }
+        .text-dark-green { color: var(--dark-green); }
+        .text-light-green { color: var(--light-green); }
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--light-green));
+            z-index: 9999;
+            transition: width 0.25s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <!-- Header -->
+    <header class="bg-dark-green text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.jpg" alt="Queen Anne School Logo" class="h-16 w-16 rounded-full">
+                <div class="ml-3">
+                    <h1 class="text-xl font-bold">Queen Anne School</h1>
+                    <p class="text-xs text-gold">Sta. Rosa & Dasmariñas</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="index.html#about" class="hover:text-gold transition">About</a>
+                <a href="index.html#academics" class="hover:text-gold transition">Academics</a>
+                <a href="admissions.html" class="text-gold">Admissions</a>
+                <a href="campus-life.html" class="hover:text-gold transition">Campus Life</a>
+                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-dark-green to-light-green text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Admissions</h1>
+            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Join Our Academic Excellence Journey</p>
+            <nav class="text-gold" data-aos="fade-up" data-aos-delay="400">
+                <a href="index.html" class="hover:underline">Home</a> > <span>Admissions</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Quick Contact Info -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="flex items-center justify-center" data-aos="fade-up">
+                    <i class="fas fa-phone text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Call Us</p>
+                        <p class="text-gray-600">(049) 502-0370</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-envelope text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Email Us</p>
+                        <p class="text-gray-600">QAS@QueenAnneSchool.org</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-clock text-gold text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-dark-green">Office Hours</p>
+                        <p class="text-gray-600">Mon-Fri: 8AM-5PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Process -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Enrollment Process</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center" data-aos="fade-up">
+                        <div class="bg-gold text-dark-green w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-bold text-dark-green mb-4">Inquiry & Application</h3>
+                        <p class="text-gray-700">Complete our online inquiry form or visit our admissions office to get started.</p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gold text-dark-green w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-bold text-dark-green mb-4">Document Submission</h3>
+                        <p class="text-gray-700">Submit required documents including birth certificate, report cards, and recommendation letters.</p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-gold text-dark-green w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-bold text-dark-green mb-4">Assessment & Interview</h3>
+                        <p class="text-gray-700">Attend scheduled assessment and parent-student interview session.</p>
+                    </div>
+                    
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-gold text-dark-green w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                        <h3 class="text-xl font-bold text-dark-green mb-4">Enrollment & Payment</h3>
+                        <p class="text-gray-700">Complete registration and payment process to secure your slot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuition & Fees -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Tuition & Fees (2024-2025)</h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-dark-green text-white">
+                                <tr>
+                                    <th class="py-4 px-6 text-left">Level</th>
+                                    <th class="py-4 px-6 text-left">Tuition Fee</th>
+                                    <th class="py-4 px-6 text-left">Miscellaneous</th>
+                                    <th class="py-4 px-6 text-left">Total</th>
+                                    <th class="py-4 px-6 text-left">Installment Options</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-4 px-6 font-semibold">Pre-School</td>
+                                    <td class="py-4 px-6">₱25,000</td>
+                                    <td class="py-4 px-6">₱8,000</td>
+                                    <td class="py-4 px-6 font-bold text-dark-green">₱33,000</td>
+                                    <td class="py-4 px-6 text-sm">4 payments of ₱8,250</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-4 px-6 font-semibold">Elementary (Grades 1-6)</td>
+                                    <td class="py-4 px-6">₱28,000</td>
+                                    <td class="py-4 px-6">₱10,000</td>
+                                    <td class="py-4 px-6 font-bold text-dark-green">₱38,000</td>
+                                    <td class="py-4 px-6 text-sm">4 payments of ₱9,500</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6 font-semibold">Junior High (Grades 7-10)</td>
+                                    <td class="py-4 px-6">₱32,000</td>
+                                    <td class="py-4 px-6">₱12,000</td>
+                                    <td class="py-4 px-6 font-bold text-dark-green">₱44,000</td>
+                                    <td class="py-4 px-6 text-sm">4 payments of ₱11,000</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-4 px-6 font-semibold">Senior High (Grades 11-12)</td>
+                                    <td class="py-4 px-6">₱35,000</td>
+                                    <td class="py-4 px-6">₱15,000</td>
+                                    <td class="py-4 px-6 font-bold text-dark-green">₱50,000</td>
+                                    <td class="py-4 px-6 text-sm">4 payments of ₱12,500</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-dark-green mb-2">Payment Schedule:</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• 1st Payment: Upon enrollment</li>
+                                    <li>• 2nd Payment: October 15</li>
+                                    <li>• 3rd Payment: January 15</li>
+                                    <li>• 4th Payment: March 15</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-green mb-2">Additional Notes:</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• 5% discount for full payment</li>
+                                    <li>• Sibling discount available</li>
+                                    <li>• Scholar rates may apply</li>
+                                    <li>• Books and uniforms sold separately</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarship Programs -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Scholarship Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-gold" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-medal text-gold text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-dark-green">Academic Excellence</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">For students with outstanding academic performance (90% and above average).</p>
+                    <div class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg text-center">Up to 100% tuition discount</div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><strong>Requirements:</strong></p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>General average of 90% or higher</li>
+                            <li>No grade below 85% in any subject</li>
+                            <li>Good moral character certificate</li>
+                            <li>Maintain performance throughout the year</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-gold" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-trophy text-gold text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-dark-green">Athletic Scholarship</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">For students excelling in sports like basketball, volleyball, badminton, and martial arts.</p>
+                    <div class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg text-center">50-75% tuition discount</div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><strong>Requirements:</strong></p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Proven athletic ability and achievements</li>
+                            <li>Commitment to school teams</li>
+                            <li>Maintain academic standing</li>
+                            <li>Attend all training sessions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-gold" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-heart text-gold text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-dark-green">Loyalty Scholarship</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">For students who have been with Queen Anne School since Pre-School.</p>
+                    <div class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg text-center">20% tuition discount</div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><strong>Requirements:</strong></p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Enrolled since Pre-School/Kindergarten</li>
+                            <li>Consistent enrollment record</li>
+                            <li>Good academic and behavior record</li>
+                            <li>No major disciplinary issues</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-gold" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-city text-gold text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-dark-green">City Scholar Program</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Partnership with local government for deserving students.</p>
+                    <div class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg text-center">Full tuition coverage</div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><strong>Requirements:</strong></p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Resident of Sta. Rosa or Dasmariñas</li>
+                            <li>Meet income requirements</li>
+                            <li>Academic excellence demonstrated</li>
+                            <li>Community service involvement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-gold" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-graduation-cap text-gold text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-dark-green">DepEd ESC</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Education Service Contracting program for Junior High students.</p>
+                    <div class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg text-center">₱9,000/year subsidy</div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><strong>Requirements:</strong></p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Grade 7 students eligible</li>
+                            <li>Meet DepEd ESC criteria</li>
+                            <li>Complete application process</li>
+                            <li>Annual renewal required</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-gold" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-users text-gold text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-dark-green">Sibling Discount</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">For families with multiple children enrolled at Queen Anne School.</p>
+                    <div class="bg-gold text-dark-green font-bold px-4 py-2 rounded-lg text-center">10% discount per sibling</div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p><strong>Requirements:</strong></p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Two or more siblings enrolled</li>
+                            <li>Applied to younger sibling's tuition</li>
+                            <li>Both students in good standing</li>
+                            <li>Automatic application</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Documents -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Required Documents</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md" data-aos="fade-right">
+                        <h3 class="text-2xl font-bold text-dark-green mb-6">For New Students</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Birth Certificate (NSO/PSA issued)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Report Card/Form 138 (Previous school)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Certificate of Good Moral Character</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Medical Certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>2x2 ID Pictures (4 pieces)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Recommendation Letter (if applicable)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-dark-green mb-6">For Transferees</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Form 137 (Student's Permanent Record)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Certificate of Transfer Credential</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Certificate of Good Moral Character</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Birth Certificate (NSO/PSA issued)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>Medical Certificate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-gold mt-1 mr-3"></i>
+                                <span>2x2 ID Pictures (4 pieces)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-light-green text-white p-6 rounded-lg text-center" data-aos="fade-up">
+                    <h4 class="text-xl font-bold mb-2">Important Note</h4>
+                    <p>All documents must be original copies or certified true copies. Photocopies will not be accepted unless properly authenticated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark-green mb-12" data-aos="fade-up">Apply Now</h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8" data-aos="fade-up">
+                    <form id="admissions-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Student's First Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Student's Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Date of Birth *</label>
+                                <input type="date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Grade Level Applying For *</label>
+                                <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                                    <option value="">Select Grade Level</option>
+                                    <option>Pre-School</option>
+                                    <option>Kindergarten</option>
+                                    <option>Grade 1</option>
+                                    <option>Grade 2</option>
+                                    <option>Grade 3</option>
+                                    <option>Grade 4</option>
+                                    <option>Grade 5</option>
+                                    <option>Grade 6</option>
+                                    <option>Grade 7</option>
+                                    <option>Grade 8</option>
+                                    <option>Grade 9</option>
+                                    <option>Grade 10</option>
+                                    <option>Grade 11</option>
+                                    <option>Grade 12</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-dark-green font-semibold mb-2">Parent/Guardian Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Contact Number *</label>
+                                <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Email Address *</label>
+                                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-dark-green font-semibold mb-2">Previous School (if applicable)</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-dark-green font-semibold mb-2">Scholarship Interest</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none">
+                                <option value="">No scholarship needed</option>
+                                <option>Academic Excellence</option>
+                                <option>Athletic Scholarship</option>
+                                <option>Loyalty Scholarship</option>
+                                <option>City Scholar Program</option>
+                                <option>DepEd ESC</option>
+                                <option>Sibling Discount</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-dark-green font-semibold mb-2">Additional Information</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-light-green focus:outline-none" placeholder="Please share any additional information about your child or special considerations..."></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" required class="mt-1 mr-3">
+                                <label class="text-sm text-gray-600">I agree to the processing of personal data in accordance with the Data Privacy Act and Queen Anne School's privacy policy. I understand that this application does not guarantee admission and that all information provided is accurate and complete.</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-dark-green text-white font-bold py-4 px-6 rounded-lg hover:bg-light-green transition">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Queen Anne School Logo" class="h-12 w-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">Queen Anne School</h3>
+                            <p class="text-gold text-sm">Est. 1994</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Shaping compassionate, competent leaders rooted in faith through holistic education since 1994.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-gold transition">About Us</a></li>
+                        <li><a href="index.html#academics" class="text-gray-300 hover:text-gold transition">Academics</a></li>
+                        <li><a href="campus-life.html" class="text-gray-300 hover:text-gold transition">Campus Life</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-gold mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mr-2 mt-1"></i>
+                            <span class="text-gray-300 text-sm">New Santa Rosa Homes, Sta. Rosa, Laguna</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gold mr-2"></i>
+                            <span class="text-gray-300">(049) 502-0370</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <span class="text-gray-300">QAS@QueenAnneSchool.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300 text-sm">© 2025 Queen Anne School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-gold text-dark-green p-3 rounded-full shadow-lg hover:bg-yellow-500 transition opacity-0 pointer-events-none z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Scroll Progress Bar
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+        }
+
+        window.addEventListener('scroll', updateScrollProgress);
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission
+        document.getElementById('admissions-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will contact you within 24-48 hours to schedule your assessment and interview.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
